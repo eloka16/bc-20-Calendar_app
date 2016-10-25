@@ -1,0 +1,57 @@
+.title {
+    height: 50px;
+    width: 100%;
+    font-size: 30px;
+    background-color: #C2D6D6;
+    text-align: center;
+    font-family: copperplate gothic light;
+}
+.nav li {
+    display: inline;
+}
+ul.nav.nav-pills {
+    text-align: right;
+    color: black;
+}
+
+.nav-pills>li {
+    float: none;
+    display: inline-block;
+}
+select {
+    height: 26px;
+}
+#date_nav {
+    clear: both;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+#calendar_table {
+    background-color:#ccd0d0; 
+    color:ffffff;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-shadow: 10px 10px 5px #898989;
+}
+
+.header {
+    background-color: #70C469; 
+    text-align: center;
+    border: 2px solid black;
+}
+.cell {
+    background-color: #EEEEEE;
+    height: 180px;
+    width: 210px;
+    border: 2px solid black;
+    padding: ;
+}
+.monthtable tbody tr  {
+    height: 80px;
+}
+#weektable {
+    margin-left: 350px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "bootstrap/css/bootstrap.min.css">
+        <link rel = "stylesheet" type = "text/css" href = "css/calendar.css">
+        <script type = "text/javascript" src = "javascript/jquery.js"></script>
+        <script type = "text/javascript" src = "javascript/calendarmonth.js"></script>
+
+    </head>
+    <body style = "background-image: url(images/background.jpg);">
+        <div class = "title">MY CALENDAR</div>
+        <div class = "container">
+            <div>
+                <ul class = "nav nav-pills" class = "pull-right">
+                    <li><a href="calendarweek.html">WEEK</a></li>
+                    <li class = "active"><a href="#">MONTH</a></li>
+                    <li><a href = "calendaryear.html">YEAR</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style = "width: 100%">
+                    <table style="margin-left: 40px;" class = "pull-left" CELLPADDING = 0 CELLSPACING = 0 BORDER = 0>
+                        <tr><td COLSPAN = 7>
+                            <select id = "monthValue" NAME = "month" onChange = "refresh();">
+                                <option value = 0>JANUARY</option>
+                                <option value = 1>FEBRUARY</option>
+                                <option value = 2>MARCH</option>
+                                <option value = 3>APRIL</option>
+                                <option value = 4>MAY</option>
+                                <option value = 5>JUNE</option>
+                                <option value = 6>JULY</option>
+                                <option value = 7>AUGUST</option>
+                                <option value = 8>SEPTEMBER</option>
+                                <option value = 9>OCTOBER</option>
+                                <option value = 10>NOVEMBER</option>
+                                <option value = 11>DECEMBER</option>
+                                </select></li>
+                            </td>
+                            <td>
+                            <select id = "selectElementId" name = "year" onChange = "refresh();"></select>
+                            </td>
+                                <script type = "text/javascript">
+                                    var min = 1900,
+                                    max = 2100,
+                                    select = document.getElementById('selectElementId');
+                                    for (var i = min; i<=max; i++){
+                                    var opt = document.createElement('option');
+                                    opt.value = i;
+                                    opt.innerHTML = i;
+                                    select.appendChild(opt);
+                                    }
+                                    select.value = new Date().getFullYear();
+                                    </script>
+                            <td>        
+                            <input type = "button" name="Go" id = "refresh" value = "DISPLAY" onClick = "refresh();">
+                            </td>
+                        </tr>
+                    </table>
+        </div>
+        <div id = "date_nav">
+            <input type = "button" name = "previousYear" value = " &#10096;&#10096;  "  onClick = "setPreviousYear()" style = "width: 100px; border-radius: 5px; background-color: #25A6E1;">
+            <input type = "button" name = "previousYear" value = "  &#10096;  "  onClick = "setPreviousMonth()"  style = "width: 100px; border-radius: 5px; background-color: #25A6E1;">
+            <input type = "button" name = "previousYear" value = "Today"  onClick = "setToday()"  style = "width: 100px; border-radius: 5px; background-color: #25A6E1;">
+            <input type = "button" name = "previousYear" value = "  &#10097;  "  onClick = "setNextMonth()"  style = "width: 100px; border-radius: 5px; background-color: #25A6E1;">
+            <input type = "button" name = "previousYear" value = "  &#10097;&#10097; "  onClick = "setNextYear()"  style = "width: 100px; border-radius: 5px; background-color: #25A6E1;">
+        </div>
+        <div id = "relod">
+            <script type = "text/javascript">selectDate();</script>
+        <div>
+    </body>
+</html>
