@@ -8,7 +8,7 @@
 
     </head>
     <body style = "background-image: url(images/background.jpg);">
-        <div class = "title">MY CALENDAR</div>
+        <div class = "title">CALENDAR WEB APP</div>
         <div class = "container">
             <div>
                 <ul class = "nav nav-pills" class = "pull-right">
@@ -37,8 +37,21 @@
                                 </select></li>
                             </td>
                             <td>
-                            
-                                   
+                            <select id = "selectElementId" name = "year" onChange = "refresh();"></select>
+                            </td>
+                                <script type = "text/javascript">
+                                    var min = 1900,
+                                    max = 2100,
+                                    select = document.getElementById('selectElementId');
+                                    for (var i = min; i<=max; i++){
+                                    var opt = document.createElement('option');
+                                    opt.value = i;
+                                    opt.innerHTML = i;
+                                    select.appendChild(opt);
+                                    }
+                                    select.value = new Date().getFullYear();
+                                    </script>
+                            <td>        
                             <input type = "button" name="Go" id = "refresh" value = "DISPLAY" onClick = "refresh();">
                             </td>
                         </tr>
@@ -52,7 +65,7 @@
             <input type = "button" name = "previousYear" value = "  &#10097;&#10097; "  onClick = "setNextYear()"  style = "width: 100px; border-radius: 5px; background-color: #25A6E1;">
         </div>
         <div id = "relod">
-            
-        </div>
+            <script type = "text/javascript">selectDate();</script>
+        <div>
     </body>
 </html>
