@@ -4,10 +4,10 @@ function refresh (){
 }
 
 function setToday() {
-  var now   = new Date();
-  var day   = now.getDate();
-  var month = now.getMonth();
-  var year  = now.getYear();
+  var todaydate   = new Date();
+  var day   = todaydate.getDate();
+  var month = todaydate.getMonth();
+  var year  = todaydate.getYear();
   if (year < 2000) 
   year = year + 1900; 
   this.focusDay = day;
@@ -124,7 +124,7 @@ function calendar(Month, Year) {
     if(currentDate == day_counter && currentMonth == Month && currentYear == parseInt(Year)){
 
          console.log('day_counter',day_counter, 'currentDate', currentDate, Month, parseInt(Year));
-      calendar_html += '<td style = "text-align: center; background-color:#ff0043;"><b>' + day_counter + '</b></td>';}
+      calendar_html += '<td style = "text-align: center; background-color:royalblue;"><b>' + day_counter + '</b></td>';}
     else{
       calendar_html += '<td style = "background-color:9999cc; color:000000; text-align: center;"> ' + day_counter + ' </td>';}
 
