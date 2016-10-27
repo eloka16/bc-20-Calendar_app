@@ -14,7 +14,6 @@ function setToday() {
   document.getElementById("monthValue").value = month;
   document.getElementById("selectElementId").value = year;
   refresh();
-  //console.log(year, month, day);
 }
 
 function setPreviousYear() {
@@ -86,14 +85,12 @@ function calendar(Month, Year) {
   months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
   daysInAMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
   currentDay = new Date();
-  //console.log('currentDay', currentDay)
   currentDate = currentDay.getDate();
-   //console.log('currentDate', currentDate)
   currentMonth = currentDay.getMonth();
   currentYear = currentDay.getFullYear();
 
   this_month = new Date(year, month, 1);
-  //console.log(this_month);
+  
 
   // Find out when this month starts and ends.
   first_week_day = this_month.getDay();
@@ -102,7 +99,7 @@ function calendar(Month, Year) {
     } else {
       days_in_this_month = daysInAMonth[month];
   }
-  //console.log(days_in_this_month);
+
   calendar_html = '<table class = "monthtable" style = "background-color:#EEEEEE; color:ffffff; width: 80%; margin: 0 auto 20px auto; -webkit-box-shadow: 10px 10px 5px #898989;">';
   calendar_html += '<tr style = "border: 2px solid black;"><td colspan = "7" style = "background-color:#70C469; color:000000; text-align: center; font-size: 30px;">' + months[month] + ' ' + year + '</td></tr>';
   calendar_html += '<tr style = "text-align: center;"><td>Sun</td><td>Mon</td><td>Tue</td><td>Wed</td><td>Thur</td><td>Fri</td><td>Sat</td></tr>';
@@ -120,7 +117,7 @@ function calendar(Month, Year) {
       calendar_html += '</tr><tr>';
 
     // Higlight the current day.
-    //console.log(currentYear, Year);
+    
     if(currentDate == day_counter && currentMonth == Month && currentYear == parseInt(Year)){
 
          console.log('day_counter',day_counter, 'currentDate', currentDate, Month, parseInt(Year));
