@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- jQuery -->
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+        <!-- Twitter Bootstrap -->
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Bootstrap Datepicker -->
+        <link href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+
+        <!-- Bootstrap Timepicker -->
+        <link href="bower_components/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet">        
+        <link rel = "stylesheet" type = "text/css" href = "css/calendar.css">
+        <script type = "text/javascript" src = "javascript/calendarweek.js"></script>
+        
+    </head>
+    <body style = "background: url(images/background.jpg)">
+        <div class = "title">CALENDAR WEB APP</div>
+        <div class = "container">
+            <div>
+                <ul class = "nav nav-pills" class = "pull-right">
+                    <li class= "active"><a href="#">WEEK</a></li>
+                    <li><a href="index.html">MONTH</a></li>
+                    <li><a href = "calendaryear.html">YEAR</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <h3>Week of <span id="week-title"></span></h3>
+            <div style="padding-bottom:15px;">
+                <button class="btn btn-primary" onclick="prevWeek();">Prev</button>
+                <button class="btn btn-primary" onclick="nextWeek();">Next</button>
+                    
+                </button>
+            </div>
+
+            <div class="table-responsive" style= "height: 450px;" >
+              <table class="table table-bordered table-hover">                
+              </table>
+            </div>
+
+            
+        </div>
+        <footer class="container">
+    <div class="row">
+      <p class="col-sm-4">&copy; 2016 Andela</p>
+    </body>
+</html>
+ 
+
+ <!-- jQuery -->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<!-- Twitter Bootstrap -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap Datepicker -->
+<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+
+<!-- Bootstrap timepicker -->
+<script src="bower_components/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+
+<!-- Moment.js -->
+<script src="bower_components/moment/min/moment.min.js"></script>
+
+<!-- Material Design for Bootstrap -->
+<script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+<script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
