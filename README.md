@@ -27,7 +27,6 @@ https://github.com/eloka16/bc-20-Calendar_app.git
 
 Navigate to the repo's folder on your computer
 
-cd checkpoint4/
 
 Run the app
 
