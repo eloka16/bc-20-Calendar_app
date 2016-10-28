@@ -31,4 +31,5 @@ cd checkpoint4/
 
 Run the app
 
-python -m SimpleHTTPServer 8000
+run python -m SimpleHTTPServer (port)
+then navigate to the port specified on your favourite browser  
