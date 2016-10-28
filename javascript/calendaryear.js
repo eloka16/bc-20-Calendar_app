@@ -84,7 +84,7 @@ function calendar(Month, Year) {
   currentYear = currentDay.getFullYear();
 
   this_month = new Date(year, month, 1);
-  console.log(this_month);
+  
 
   // Find out when this month starts and ends.
   first_week_day = this_month.getDay();
@@ -110,7 +110,7 @@ function calendar(Month, Year) {
       calendar_html += '</tr><tr>';
 
     // Highlight the current day.
-    console.log(currentYear, Year);
+    
     if(currentDate == day_counter && currentMonth == Month && currentYear == parseInt(Year))
       calendar_html += '<td style="text-align: center; background-color:royalblue;"><b>' + day_counter + '</b></td>';
     else
